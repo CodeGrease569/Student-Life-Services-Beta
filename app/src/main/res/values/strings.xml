@@ -1,3 +1,85 @@
+<<<<<<< HEAD
 <resources>
     <string name="app_name">SLS</string>
 </resources>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Student Life</string>
+    <string name="institution_name">SOUTHWESTERN UNIVERSITY PHINMA</string>
+    <string name="hero_tagline">Your centralized hub for Student Life services — scholarships, documents, and more.</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="sign_in_sub">Sign in to your Student Life account</string>
+    <string name="student_id_or_email">Student ID or Email</string>
+    <string name="student_id_hint">e.g. 2024-00001 or student@suu.edu.ph</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_account">No account yet? Sign up</string>
+    <string name="have_account">Already have an account? Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_account_sub">Register to access student services</string>
+    <string name="full_name">Full Name</string>
+    <string name="student_id">Student ID Number</string>
+    <string name="university_email">University Email</string>
+    <string name="course_program">Degree Program / Course</string>
+    <string name="year_level">Year Level</string>
+    <string name="already_have_account">Already have an account? Sign In</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_services">Services</string>
+    <string name="nav_scholarship">Scholarship</string>
+    <string name="nav_requests">Requests</string>
+    <string name="nav_alerts">Alerts</string>
+
+    <!-- Dashboard -->
+    <string name="good_morning">Good morning 👋</string>
+    <string name="requirements_submitted">Requirements Submitted</string>
+    <string name="pending_actions">Pending Actions</string>
+    <string name="quick_services">Quick Services</string>
+    <string name="recent_requests">Recent Requests</string>
+    <string name="view_all">View all</string>
+    <string name="total_requests">Total Requests</string>
+    <string name="completed">Completed</string>
+    <string name="pending">Pending</string>
+
+    <!-- Services -->
+    <string name="services_title">Services</string>
+    <string name="services_sub">All Student Life services in one place.</string>
+    <string name="scholarship">Scholarship</string>
+    <string name="student_support">Student Support</string>
+    <string name="documents">Documents</string>
+
+    <!-- Scholarship -->
+    <string name="scholarship_program_title">CHED Academic Excellence Program</string>
+    <string name="tab_overview">Overview</string>
+    <string name="tab_apply">Apply</string>
+    <string name="tab_requirements">Requirements</string>
+    <string name="requirements_summary">Requirements Summary</string>
+    <string name="view_requirements">View Requirements</string>
+    <string name="submit_requirement">Submit Requirement</string>
+    <string name="apply_continuing">Apply for Continuing Scholarship</string>
+
+    <!-- Request History -->
+    <string name="request_history_title">Request History</string>
+    <string name="request_history_sub">All your submitted transactions.</string>
+    <string name="search_requests_hint">Search by reference number or type…</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Notifications</string>
+    <string name="mark_all_read">Mark all read</string>
+    <string name="filter_all">All</string>
+    <string name="filter_unread">Unread</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Student Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="copyright_notice">© 2026 Student Life Office · Southwestern University PHINMA</string>
+</resources>
+>>>>>>> 904ea601693e89dea807dfcca6f5c69d9386a8d9

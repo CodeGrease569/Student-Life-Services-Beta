@@ -1,0 +1,6 @@
+{
+  "name": "Student Life",
+  "description": "Centralized student service and documentation system for Southwestern University PHINMA - scholarships, documents, student concerns, inquiries, and request tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

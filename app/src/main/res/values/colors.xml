@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
+=======
+    <!-- Brand Maroon / Burgundy Palette -->
+    <color name="maroon_primary">#3B0E11</color>
+    <color name="maroon_dark">#2E0B0E</color>
+    <color name="maroon_light">#521B20</color>
+    <color name="maroon_tint">#1A3B0E11</color>
+
+    <!-- Warm Sand / Cream Backgrounds -->
+    <color name="background_sand">#F8F5EE</color>
+    <color name="background_sand_light">#FCFAF6</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="card_border">#EAE3D5</color>
+    <color name="divider_color">#E5DECE</color>
+    <color name="divider">#ECE6DC</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#2B0B0E</color>
+    <color name="text_secondary">#7A7067</color>
+    <color name="text_hint">#A49A8F</color>
+    <color name="text_on_dark">#FFFFFF</color>
+    <color name="text_gold">#E9D8A6</color>
+
+    <!-- Status Colors -->
+    <!-- Approved / Completed / Active -->
+    <color name="status_green_bg">#DCFCE7</color>
+    <color name="status_green_text">#15803D</color>
+
+    <!-- Processing / In Progress -->
+    <color name="status_blue_bg">#E0E7FF</color>
+    <color name="status_blue_text">#4338CA</color>
+
+    <!-- Pending / Under Review -->
+    <color name="status_yellow_bg">#FEF3C7</color>
+    <color name="status_yellow_text">#B45309</color>
+
+    <!-- Missing / Rejected -->
+    <color name="status_red_bg">#FEE2E2</color>
+    <color name="status_red_text">#B91C1C</color>
+
+    <!-- Quick Service Circle Backgrounds -->
+    <color name="service_scholarship_bg">#FCE7F3</color>
+    <color name="service_scholarship_tint">#BE185D</color>
+    <color name="service_documents_bg">#EDE9FE</color>
+    <color name="service_documents_tint">#6D28D9</color>
+    <color name="service_concerns_bg">#DCFCE7</color>
+    <color name="service_concerns_tint">#15803D</color>
+    <color name="service_lostid_bg">#FFEDD5</color>
+    <color name="service_lostid_tint">#C2410C</color>
+    <color name="service_history_bg">#E0F2FE</color>
+    <color name="service_history_tint">#0369A1</color>
+
+    <!-- Basic -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>
+>>>>>>> 904ea601693e89dea807dfcca6f5c69d9386a8d9
