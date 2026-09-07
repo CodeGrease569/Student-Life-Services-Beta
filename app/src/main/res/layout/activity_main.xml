@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_sand">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top AppBar -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/card_border"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="16dp">
+
+                <!-- Left Branding: Logo + Title -->
+                <LinearLayout
+                    android:id="@+id/layoutTopBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/bg_circle_icon">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_mortarboard"
+                            app:tint="@color/maroon_primary" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Student Life"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Right Actions: Bell with Badge, Profile -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Notification Bell with Badge -->
+                    <FrameLayout
+                        android:id="@+id/btnTopNotification"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_bell"
+                            app:tint="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/tvTopBadgeCount"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="top|end"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/bg_badge_orange"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/white"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <!-- Student Avatar Button -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnTopProfile"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        app:cardBackgroundColor="@color/maroon_primary"
+                        app:cardCornerRadius="17dp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/tvTopAvatarInitials"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif-bold"
+                            android:text="MS"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- View Flipper for 5 Screens -->
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- Index 0: Dashboard -->
+            <include
+                android:id="@+id/viewDashboard"
+                layout="@layout/layout_dashboard" />
+
+            <!-- Index 1: Services -->
+            <include
+                android:id="@+id/viewServices"
+                layout="@layout/layout_services" />
+
+            <!-- Index 2: Scholarship -->
+            <include
+                android:id="@+id/viewScholarship"
+                layout="@layout/layout_scholarship" />
+
+            <!-- Index 3: Requests -->
+            <include
+                android:id="@+id/viewRequests"
+                layout="@layout/layout_requests" />
+
+            <!-- Index 4: Alerts -->
+            <include
+                android:id="@+id/viewAlerts"
+                layout="@layout/layout_alerts" />
+
+        </ViewFlipper>
+
+        <!-- Bottom Navigation View -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:elevation="8dp"
+            app:itemIconSize="22dp"
+            app:itemIconTint="@color/bottom_nav_colors"
+            app:itemTextColor="@color/bottom_nav_colors"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
