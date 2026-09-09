@@ -25,22 +25,22 @@ public class ProfileActivity extends AppCompatActivity {
         TextView tvInitials = findViewById(R.id.tvProfileAvatarInitials);
         TextView tvFullName = findViewById(R.id.tvProfileFullName);
         TextView tvStudentId = findViewById(R.id.tvProfileStudentId);
+        TextView tvFirstName = findViewById(R.id.tvProfileFirstName);
+        TextView tvMiddleName = findViewById(R.id.tvProfileMiddleName);
         TextView tvEmail = findViewById(R.id.tvProfileEmail);
-        TextView tvCourse = findViewById(R.id.tvProfileCourse);
-        TextView tvYear = findViewById(R.id.tvProfileYear);
         MaterialButton btnLogout = findViewById(R.id.btnProfileLogout);
 
         String fullName = sessionManager.getStudentName();
+        String firstName = sessionManager.getStudentFirstName();
+        String middleName = sessionManager.getStudentMiddleName();
         String studentId = sessionManager.getStudentId();
         String email = sessionManager.getStudentEmail();
-        String course = sessionManager.getStudentCourse();
-        String year = sessionManager.getStudentYear();
 
         tvFullName.setText(fullName);
         tvStudentId.setText("Student ID: " + studentId);
+        tvFirstName.setText(!firstName.isEmpty() ? firstName : (fullName != null ? fullName.split("\\s+")[0] : ""));
+        tvMiddleName.setText(!middleName.isEmpty() ? middleName : "—");
         tvEmail.setText(email);
-        tvCourse.setText(course);
-        tvYear.setText(year);
 
         // Initials
         if (fullName != null && !fullName.isEmpty()) {

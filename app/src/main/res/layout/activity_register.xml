@@ -71,24 +71,74 @@
             android:textColor="@color/text_secondary"
             android:textSize="14sp" />
 
-        <!-- Full Name -->
+        <!-- First Name -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/first_name"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etRegisterFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_field"
+            android:fontFamily="sans-serif"
+            android:hint="@string/first_name_hint"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+
+        <!-- Middle Name (Optional) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/middle_name"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etRegisterMiddleName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_field"
+            android:fontFamily="sans-serif"
+            android:hint="@string/middle_name_hint"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+
+        <!-- Full Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/full_name"
             android:textColor="@color/text_primary"
             android:textSize="13sp" />
 
         <EditText
-            android:id="@+id/etRegisterName"
+            android:id="@+id/etRegisterFullName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="6dp"
             android:background="@drawable/bg_input_field"
             android:fontFamily="sans-serif"
-            android:hint="e.g. Maria Santos"
+            android:hint="@string/full_name_hint"
             android:inputType="textPersonName"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
@@ -145,50 +195,6 @@
             android:textColor="@color/text_primary"
             android:textColorHint="@color/text_hint"
             android:textSize="14sp" />
-
-        <!-- Course / Program -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/course_program"
-            android:textColor="@color/text_primary"
-            android:textSize="13sp" />
-
-        <EditText
-            android:id="@+id/etRegisterCourse"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="6dp"
-            android:background="@drawable/bg_input_field"
-            android:fontFamily="sans-serif"
-            android:hint="e.g. BS Computer Science"
-            android:inputType="text"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textColor="@color/text_primary"
-            android:textColorHint="@color/text_hint"
-            android:textSize="14sp" />
-
-        <!-- Year Level -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/year_level"
-            android:textColor="@color/text_primary"
-            android:textSize="13sp" />
-
-        <Spinner
-            android:id="@+id/spRegisterYear"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="6dp"
-            android:background="@drawable/bg_input_field"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp" />
 
         <!-- Password -->
         <TextView

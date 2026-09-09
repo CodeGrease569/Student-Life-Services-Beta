@@ -28,7 +28,7 @@ public class ScholarshipApplyActivity extends AppCompatActivity {
     private Spinner spProgram, spSemester;
     private RadioGroup rgType;
     private RadioButton rbNew, rbContinuing;
-    private EditText etStudentId, etFullName, etCourse, etNotes;
+    private EditText etStudentId, etFullName, etNotes;
     private TextView tvUploadFileName;
     private DatabaseHelper dbHelper;
     private SessionManager sessionManager;
@@ -51,7 +51,6 @@ public class ScholarshipApplyActivity extends AppCompatActivity {
         rbContinuing = findViewById(R.id.rbApplyContinuing);
         etStudentId = findViewById(R.id.etApplyStudentId);
         etFullName = findViewById(R.id.etApplyFullName);
-        etCourse = findViewById(R.id.etApplyCourse);
         etNotes = findViewById(R.id.etApplyNotes);
         tvUploadFileName = findViewById(R.id.tvUploadFileName);
         MaterialButton btnSubmit = findViewById(R.id.btnApplySubmit);
@@ -78,7 +77,6 @@ public class ScholarshipApplyActivity extends AppCompatActivity {
         // Pre-fill student info
         etStudentId.setText(sessionManager.getStudentId());
         etFullName.setText(sessionManager.getStudentName());
-        etCourse.setText(sessionManager.getStudentCourse());
 
         // File upload click
         findViewById(R.id.layoutUploadBox).setOnClickListener(v -> {

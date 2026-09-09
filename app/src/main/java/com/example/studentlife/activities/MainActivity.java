@@ -367,11 +367,9 @@ public class MainActivity extends AppCompatActivity {
         // Update user greetings
         String fullName = sessionManager.getStudentName();
         String studentId = sessionManager.getStudentId();
-        String course = sessionManager.getStudentCourse();
-        String year = sessionManager.getStudentYear();
 
         tvStudentGreeting.setText(fullName);
-        tvStudentDetails.setText(studentId + "  ·  " + course + "  ·  " + year);
+        tvStudentDetails.setText("Student ID: " + studentId);
         tvTopAvatarInitials.setText(getInitials(fullName));
 
         // Scholarship Info

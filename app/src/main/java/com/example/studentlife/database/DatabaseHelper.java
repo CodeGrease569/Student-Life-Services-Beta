@@ -21,7 +21,7 @@ import java.util.Locale;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "student_life.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Table Names
     private static final String TABLE_STUDENTS = "students";
@@ -35,6 +35,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Students table columns
     private static final String KEY_STUDENT_ID = "student_id";
+    private static final String KEY_FIRST_NAME = "first_name";
+    private static final String KEY_MIDDLE_NAME = "middle_name";
     private static final String KEY_FULL_NAME = "full_name";
     private static final String KEY_EMAIL = "email";
     private static final String KEY_PASSWORD = "password";
@@ -87,6 +89,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create Students table
         String CREATE_STUDENTS_TABLE = "CREATE TABLE " + TABLE_STUDENTS + "("
                 + KEY_STUDENT_ID + " TEXT PRIMARY KEY,"
+                + KEY_FIRST_NAME + " TEXT,"
+                + KEY_MIDDLE_NAME + " TEXT,"
                 + KEY_FULL_NAME + " TEXT,"
                 + KEY_EMAIL + " TEXT,"
                 + KEY_PASSWORD + " TEXT,"
@@ -150,20 +154,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Seed Students
         ContentValues student1 = new ContentValues();
         student1.put(KEY_STUDENT_ID, "2023-00456");
-        student1.put(KEY_FULL_NAME, "Maria Santos");
+        student1.put(KEY_FIRST_NAME, "Maria");
+        student1.put(KEY_MIDDLE_NAME, "Clara");
+        student1.put(KEY_FULL_NAME, "Maria Clara Santos");
         student1.put(KEY_EMAIL, "student@suu.edu.ph");
         student1.put(KEY_PASSWORD, "password123");
-        student1.put(KEY_COURSE, "BS Computer Science");
-        student1.put(KEY_YEAR_LEVEL, "3rd Year");
+        student1.put(KEY_COURSE, "");
+        student1.put(KEY_YEAR_LEVEL, "");
         db.insert(TABLE_STUDENTS, null, student1);
 
         ContentValues adminStudent = new ContentValues();
         adminStudent.put(KEY_STUDENT_ID, "2020-00001");
+        adminStudent.put(KEY_FIRST_NAME, "Student");
+        adminStudent.put(KEY_MIDDLE_NAME, "Life");
         adminStudent.put(KEY_FULL_NAME, "Student Life Admin");
         adminStudent.put(KEY_EMAIL, "admin@suu.edu.ph");
         adminStudent.put(KEY_PASSWORD, "admin123");
-        adminStudent.put(KEY_COURSE, "Administration");
-        adminStudent.put(KEY_YEAR_LEVEL, "Staff");
+        adminStudent.put(KEY_COURSE, "");
+        adminStudent.put(KEY_YEAR_LEVEL, "");
         db.insert(TABLE_STUDENTS, null, adminStudent);
 
         // Seed Scholarship
@@ -254,6 +262,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_STUDENT_ID, student.getStudentId());
+        values.put(KEY_FIRST_NAME, student.getFirstName());
+        values.put(KEY_MIDDLE_NAME, student.getMiddleName());
         values.put(KEY_FULL_NAME, student.getFullName());
         values.put(KEY_EMAIL, student.getEmail());
         values.put(KEY_PASSWORD, student.getPassword());
@@ -273,14 +283,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             String storedPassword = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PASSWORD));
             // Demo tolerance: allows "any" or match
             if ("any".equalsIgnoreCase(password) || storedPassword.equals(password) || !password.isEmpty()) {
-                Student student = new Student(
-                        cursor.getString(cursor.getColumnIndexOrThrow(KEY_STUDENT_ID)),
-                        cursor.getString(cursor.getColumnIndexOrThrow(KEY_FULL_NAME)),
-                        cursor.getString(cursor.getColumnIndexOrThrow(KEY_EMAIL)),
-                        storedPassword,
-                        cursor.getString(cursor.getColumnIndexOrThrow(KEY_COURSE)),
-                        cursor.getString(cursor.getColumnIndexOrThrow(KEY_YEAR_LEVEL))
-                );
+                String studentId = cursor.getString(cursor.getColumnIndexOrThrow(KEY_STUDENT_ID));
+                String fullName = cursor.getString(cursor.getColumnIndexOrThrow(KEY_FULL_NAME));
+                int fnIndex = cursor.getColumnIndex(KEY_FIRST_NAME);
+                int mnIndex = cursor.getColumnIndex(KEY_MIDDLE_NAME);
+                String firstName = (fnIndex != -1) ? cursor.getString(fnIndex) : "";
+                String middleName = (mnIndex != -1) ? cursor.getString(mnIndex) : "";
+                String email = cursor.getString(cursor.getColumnIndexOrThrow(KEY_EMAIL));
+
+                Student student = new Student(studentId, firstName, middleName, fullName, email, storedPassword);
                 cursor.close();
                 return student;
             }
