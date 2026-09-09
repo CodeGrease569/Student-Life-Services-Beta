@@ -22,7 +22,12 @@
     <string name="have_account">Already have an account? Sign In</string>
     <string name="create_account">Create Account</string>
     <string name="create_account_sub">Register to access student services</string>
+    <string name="first_name">First Name</string>
+    <string name="first_name_hint">e.g. Maria</string>
+    <string name="middle_name">Middle Name (Optional)</string>
+    <string name="middle_name_hint">e.g. Clara (Optional)</string>
     <string name="full_name">Full Name</string>
+    <string name="full_name_hint">e.g. Maria Clara Santos</string>
     <string name="student_id">Student ID Number</string>
     <string name="university_email">University Email</string>
     <string name="course_program">Degree Program / Course</string>

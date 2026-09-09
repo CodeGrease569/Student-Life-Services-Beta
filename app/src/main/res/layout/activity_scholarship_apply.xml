@@ -208,29 +208,6 @@
                     android:textColor="@color/text_primary"
                     android:textSize="14sp" />
 
-                <!-- Course -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="Degree Program / Course"
-                    android:textColor="@color/text_primary"
-                    android:textSize="13sp" />
-
-                <EditText
-                    android:id="@+id/etApplyCourse"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="6dp"
-                    android:background="@drawable/bg_input_field"
-                    android:fontFamily="sans-serif"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:text="BS Computer Science"
-                    android:textColor="@color/text_primary"
-                    android:textSize="14sp" />
-
                 <!-- Additional Notes -->
                 <TextView
                     android:layout_width="wrap_content"
