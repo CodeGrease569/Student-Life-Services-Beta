@@ -1,9 +1,6 @@
 *.iml
 .gradle
-<<<<<<< HEAD
-=======
 .kotlin
->>>>>>> 904ea601693e89dea807dfcca6f5c69d9386a8d9
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -17,8 +14,5 @@
 .externalNativeBuild
 .cxx
 local.properties
-<<<<<<< HEAD
-=======
 .env
 debug.keystore
->>>>>>> 904ea601693e89dea807dfcca6f5c69d9386a8d9

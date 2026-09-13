@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-</resources>
-=======
     <!-- Brand Maroon / Burgundy Palette -->
     <color name="maroon_primary">#3B0E11</color>
     <color name="maroon_dark">#2E0B0E</color>
@@ -60,4 +55,3 @@
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
 </resources>
->>>>>>> 904ea601693e89dea807dfcca6f5c69d9386a8d9
